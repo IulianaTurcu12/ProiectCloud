@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "workshop-usnaub",
+  "private_key_id": "c2d7be79840e8c6848e1c8678afcca21f12810ba",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDEpUNAVZbAXl2F\nxr7tdUjTPniDcP+1lQ1MhLHW+gCDQdhgq6tha7Zxxhwo9uBTe8cGeo5Ej2/POrJu\n8zwrR3ZTA/z+OMgFO9IRrkUbOkXmVhvYb1TPZPTxSfGGq2cROpxPDYXQk5m7xo5w\nrLq044u2foNeFXJnFxaUyZM4bznlAwrTPxWV/ZltI7XpXaz7pkiVx1LKH97unD1D\neduuJMPihBQtDEmTe2VKwTSwLmMd05gwdoht7gmMW7HxdnR4Z6NFG5EXhWAAd6DC\nMIbJE83RbLLGhnzfrvY+Gi4WRMgZAZTri4sszOTLq9C5RPXPj+jAJC7+zCAH0Opl\nWzds/vWdAgMBAAECggEAFQXwEywzUjykdf1iAyQDVaY7nx3RELovMkuLccbHkEDV\nX7xqtZ8c4bwC3bRLFlHI3N30YMsO8pI9alQxzhS1RznJbepnI/wZwM8nTzpjJ7V0\nA6cfY47RCwzTOAkSG0rvVBpHgJ2PFX6sUsp8qYMcODX9WG0ljnTu8pg8V4+4mk2R\nfJCrl9+8lJLwG/5BzugdOE1W+81slB3KRP/3HXuF9L4I8dRwyJ+2v0eRT8C8gNmm\nEUOnpRw3YU+4EyjTDBzKz+zXek0yMXi2UgXf6sg20KJbWIRncI5KOtne9BCE0jL3\npI1XIgbSku1C0hvTqZQLqomf4HgoNVcjHusoeRPrQQKBgQDhPLnpYjjHr3dKtl5K\n7FaBy+Ji/KsDJWxuVDZGNrCaha9BNzl/vuzH+tlGEtPQnyb3QwHcSGDWeRsMgrEp\n9GDR5+03Lr4tBveSJ9Z4vKGkb8+LeJbu46ECVBbyA0N7ajikArYUXRJcvPXU7Lqn\npDrKViocJYFiP28k0MNYSkv9PQKBgQDfgNkFO71+xWs1/B+GaJyznAmcJQ76YnK2\ncaO1tn6BAaJSiS7ujFKR4EpqZFqCEWvxJhlZq/8RqSAv0qr5/Ug9sJKBCSTc+jwD\nd/srTzajdWkyrBVyEkd4fDtmYxP5cT7Hv9I0nD+5qpFPJVIsgOCg2Y0/827s3IUM\n2ETOvWcf4QKBgQCtlQpGBa9ynRSXXKKgpTEqCMHovYbh/tZo1LebNwy1mW9uGCxU\n+gQrPnRyH5JkBjOWfWqSpKkUwPKKmrIEflSbkFztmTVxKBxl5BPSqrT8MDtH5mCT\nrJPqYnnoe4FnPH54T6qZWP0MwYfHV8Wl6thwFSWQ2Yqz9+Uk/0p84Y1clQKBgHGx\nn7Qz0Y99aa5KlNbQvHX5eEH/8ACat/PrFvZG4U9Kv4Hw2vjqVM50JCa+6fOkXR6M\n3PRqtBQNzpvFNMh6eZc4DS6qsh/fA0xYamJ7pzW7ckoek8I1XjoCKE1LNUv8uYzv\nHUU5/oi6JbT3LTgKTzpDsMDJWrIO83e3RDlOy/jBAoGBAIkiip7qbNvfOKaiHLoF\nJ5mUEr7uvLb3xjWnodSg8hfQvEPDJbKoDLCnDPmCanKvCYx+1z98PPJSKxQx6s9o\nrQzl234VTZD47mOKAWzIjG/QlL+UrQAYkalDk/GYBDcXDld8LpI4igyzyJILtcmM\nsD85IutlOcKopK4/f8s78jcU\n-----END PRIVATE KEY-----\n",
+  "client_email": "proiect-cloud@workshop-usnaub.iam.gserviceaccount.com",
+  "client_id": "112051591988951829546",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/proiect-cloud%40workshop-usnaub.iam.gserviceaccount.com"
+}
