@@ -195,19 +195,6 @@ app.get('/email', (req, res)=>{
   
 })
 
-//Youtube
-
-app.post('/youtube', async(req,res) =>{
-  try{
-    let url = 'https://youtube.googleapis.com/youtube/v3/search?q=' + req.body.title + '&key=AIzaSyCpePCZfK_XhVWcrXQyLB7SinKSrmNoWNk&type=video&part=snippet'
-    let response = await axios.get(url)
-    let first_url = "https://www.youtube.com/watch?v=" + response.data.items[0].id.videoId
-    console.log(first_url)
-  }catch(e){
-    console.warn(e)
-  }
- 
-} )
 
 
 //Web API Call
@@ -281,12 +268,6 @@ app.delete('/products/:name', async (req,res)=>{
       await product.destroy();
       email_params.Message.Body.Html.Data = "Product " + req.params.name + " was deleted"
   
-      new AWS.SES(SESConfig).sendEmail(email_params).promise().then((res)=>{
-        console.log(res)
-      }).catch((e)=>{
-        console.warn(e);
-        res.status(500).json({ message: "Email could not be sent" });
-      })
       
       res.status(200).json({ message: "Product " + req.params.name + " was deleted" });
     } else {
