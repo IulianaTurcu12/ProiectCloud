@@ -1,70 +1,16 @@
-# Getting Started with Create React App
+# Proiect Cloud Computing
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Introducere
+Am creat acest proiect cu scopul de a ne putea bucura de un cocktail preparat de noi in propria noastra casa, dat fiind contextul pandemiei si al imposibilitatii de a mai putea petrece timp cu prietenii in localuri, restaurante si terase.
 
-## Available Scripts
+## Descriere problema
+In ultimul an petrecut in casa, datorata pandemiei de COVID-19, m-am gandit ca o aplicatie web care sa ne ajute la destinderea atmosferei ar fi bine venita. In acest fel putem sa ne bucuram impreuna cu prietenii apropiati sau cu familia de preparate poate chiar mai bune decat la baruri, preparate chiar de noi si care sunt mult mai putin costisitoare. O problema destul de des intalnita este, pe de o parte, lipsa unor retete disponibile online, iar pe de alta parte felul in care putem folosi produsele de care dispunem la prepararea unor retete delicioase de cocktail-uri. 
+In aplicatie putem vizualia lista ingredientelor de care dispunem pentru a putea prepara cocktail-urile dorite (link poza 1), si de asemenea putem adauga ingrediente noi prin completarea unui formular in care introducem denumirea ingredientului, cantitatea si pretul (link poza 2).
 
-In the project directory, you can run:
+## Prezentare API-uri utilizate
+Pentru realizarea funcționalităților prezentate anterior, am utilizat 2 API-uri: TheCocktailDB (https://www.thecocktaildb.com/api.php) si Gmail API.
+TheCocktailDB API  oferă o bază de date universal cu băuturi și cocktail-uri din întreaga lume. Acest API permite cautarea in baza lor de cocktailuri dupa categorie, nume, ingredient etc. In aplicatie am folosit l-am folosit pentru introducerea de ingrediente necesate pentru cocktail-uri, iar fiecare ingredient adaugat vine insotit de o scurta descriere.
+Gmail API este un RESTful API ce este folosit pentru a accesa casuta de Gmail si de a trimite mail-uri. Pentru cele mai multe aplicatii, Gmail API este cea mai buna solutie pentru accesul la datele din Gmail. Acesta poate fi folosit la citirea de mail-uri, adaugarea sau stergerea filtrelor, automatizarea sau programarea trimiterii mesajelor, migrarea email-uriloe catre alt provider.
+In aplicatia mea, am utilizat Gmail API pentru a putea automatiza trimiterea de mesaje in momentul in care este adaugat un nou ingredient la lista mea.
 
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Exemple de request/response
