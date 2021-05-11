@@ -13,4 +13,74 @@ TheCocktailDB API  oferă o bază de date universal cu băuturi și cocktail-uri
 Gmail API este un RESTful API ce este folosit pentru a accesa casuta de Gmail si de a trimite mail-uri. Pentru cele mai multe aplicatii, Gmail API este cea mai buna solutie pentru accesul la datele din Gmail. Acesta poate fi folosit la citirea de mail-uri, adaugarea sau stergerea filtrelor, automatizarea sau programarea trimiterii mesajelor, migrarea email-uriloe catre alt provider.
 In aplicatia mea, am utilizat Gmail API pentru a putea automatiza trimiterea de mesaje in momentul in care este adaugat un nou ingredient la lista mea.
 
+##Descriere flux de date
+Utilizatorul aplicatiei intra pe pagina principala:
+-insereaza un nou ingredient
+-datele indroduse se vor salva 
+-pe baza numelui ingredientului se va accesa API-ul de ingrediente utilizat
+-dupa identificarea ingredientului, acesta va returna o descreire
+-obientul se va salva in baza de date
+-vom primi un mail cum ca lista noastra de ingrediente a fost actualizata.
+
 ## Exemple de request/response
+#Afisarea ingredientelor:
+app.get('/products', async(req, res)=>{
+  try{
+    let products = await Product.findAll();
+    res.status(200).json(products)
+  }catch(e){
+    console.warn(e);
+    res.status(500).json({ message: "Could not retrieve data" });
+  }
+})
+
+#Salvarea ingredientelor:
+app.post('/products', async(req,res)=>{
+  try{
+    let description = await getIngredientInfo(req.body.name)
+    
+    const product = {
+      name: req.body.name,
+      quantity: req.body.quantity,
+      price: req.body.price,
+      description: description
+    }
+    await Product.create(product)
+    SendEmail()
+    res.status(201).json({ message: "Product " + product.name + " was created" });
+  }catch(e){
+    console.warn(e);
+    res.status(500).json({ message: "Could not create new product" });
+  } 
+})
+
+#Update ingredient
+app.put('/products/:name', async(req, res)=>{
+  try{
+    let product = await Product.findOne({where: {name: req.params.name}})
+    if(product){
+      await product.update(req.body);
+      res.status(202).json({ message: "Product " + req.params.name + " was updated" });
+    }
+  }catch(e){
+    console.warn(e);
+    res.status(500).json({ message: "Could not update product" });
+  }
+})
+
+#Stergere ingredient
+app.delete('/products/:name', async (req,res)=>{
+  try {
+    let product = await Product.findOne({where: {name: req.params.name}});
+    if (product) {
+      await product.destroy();
+      email_params.Message.Body.Html.Data = "Product " + req.params.name + " was deleted"
+      res.status(200).json({ message: "Product " + req.params.name + " was deleted" });
+    } else {
+      res.status(200).json({ message: "Product " + req.params.name + " was not found" });
+    }
+  } catch (e) {
+    console.warn(e);
+    res.status(500).json({ message: "Could not delete product record" });
+  }
+})
